@@ -24,12 +24,9 @@ a {
 
 .nav a,
 .contact-info a {
-  transition: color 0.3s ease;
+ transition: color 0.3s ease;
 }
 
-.logo span.first-three {
-  color: #4D5AE5;
-}
 
 .logo span.rest {
   color: #2E2F42;
@@ -56,21 +53,30 @@ a {
 
 .logo {
   font-family: 'Raleway', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.03em;
   padding-left: 156px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: #4D5AE5
  }
-
+.logo-part {
+ color: #2E2F42;
+}
 .nav-list {
   display: flex;
   gap: 40px;
-   padding-left: 156px;
+  padding-left: 156px;
 }
 
 .nav a {
   color: #2E2F42;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
    }
 
 .contact-info {
@@ -229,17 +235,6 @@ a {
 }
 
 
-/*.portfolio h3 {
-  font-size: 20px;
-  margin: 8px 0;
-  color: #2E2F42;
-}
-
-.portfolio p {
-  font-size: 16px;
-  color: #434455;
-}*/
-
 
 .text-frame {
   display: block;              /* чтобы span вел себя как блочный элемент */
@@ -273,16 +268,14 @@ a {
 
 .footer-logo {
   font-family: 'Raleway', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 0.03em;
-  margin-bottom: 16px;
- 
-}
-.footer-logo span.first-three {
+  line-height: 1.17;
+  text-transform: uppercase;
   color: #4D5AE5;
-}
-.footer p {
-  font-size: 16px;
-  line-height: 1.5;
+  }
+
+.footer-logo .logo-part {
+  color: #ffffff;
 }
