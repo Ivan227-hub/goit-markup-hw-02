@@ -37,59 +37,59 @@ a {
   gap: 40px;
 }
 
-.logo span.rest {
+/*.logo span.rest {
   color: #2e2f42;
 }
 
 
 .footer-logo .rest {
   color: #ffffff;
-}
+}*/
 
 .site-header {
   background-color: #ffffff;
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 24px 156px 24px;
   flex-wrap: wrap;
+  position: relative; /* добавлено для использования position */
+  left: 0;            /* чтобы позиционировать относительно левого края */
+  top: 0;
 }
 
+.nav-link,
 .header-nav {
-  display: inline-flex;
-  /*align-items: center;*/
+  display: flex;
   gap: 40px;
+  order: 0; 
+  color:  #434455;
+  font-weight: 500;
 }
+
 
 .logo {
+  color: #4d5ae5;
   font-family: 'Raleway', sans-serif;
-  padding-left: 156px;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.03em;
-  padding-left: 156px;
   line-height: 1.17;
   text-transform: uppercase;
-  color: #4d5ae5;
+  flex-grow: 0; 
 }
 
-/*.logo span.rest {
-  color: #2E2F42;
-}*/
-.logo span.rest {
+.logo .logo-part {
   color: #2e2f42;
 }
 
 .nav-list {
-  display: inline-flex;
+  display: flex;
   gap: 40px;
   padding-left: 156px;
 }
 
-.header-nav a {
-  color:  #434455;
-  font-weight: 500;
-}
+
 
 .nav-link {
   letter-spacing: 0.02em;
@@ -100,7 +100,7 @@ a {
 
 .contact-info {
   /*padding-left: 940px;*/
-  display: inline-flex;
+  display: flex;
   gap: 40px;
   font-size: 16px;
   font-style: normal;
@@ -111,15 +111,14 @@ a {
   font-weight: 400;
 }
 
-.header-nav a:hover,
-.header-nav a:focus,
+/*.header-nav a:hover,
+.header-nav a:focus,*/
 .nav-list a:hover,
 .nav-list a:focus,
 .contact-info a:hover,
 .contact-info a:focus {
   color: #404BBF;
 }
-
 .hero {
   text-align: center;
   background-color: #2E2F42;
@@ -127,14 +126,13 @@ a {
   padding: 120px 20px;
   max-height: 600px;
   line-height: 1.07;
-  letter-spacing: 0.02em;
 }
 
 .hero-title {
   font-size: 56px;
   font-weight: 700;
   margin-bottom: 32px;
-  /*letter-spacing: 0.02em;*/
+  letter-spacing: 0.02em;
 }
 
 .btn_services {
@@ -154,9 +152,29 @@ a {
 
 .btn_services:hover,
 .btn_services:focus {
- background-color: #404BBF;
- color: white;
+  background-color: #404BBF;
+  color: white;
 }
+
+/* Стили для заголовков внутри списка */
+.val-title {
+  font-weight: 500;        /* исправлено: добавлен font-weight: 500 */
+  font-size: 20px;         /* добавлен размер шрифта 20px */
+  line-height: 1.2;        /* добавлен line-height 1.2 */
+  letter-spacing: 0.02em;  /* добавлен letter-spacing */
+  color: #2e2f42;          /* цвет текста */
+  margin-bottom: 8px;      /* для отступа снизу */
+}
+
+/* Стили для параграфов внутри списка */
+.val-text {
+  font-size: 16px;         /* размер шрифта */
+  line-height: 1.5;        /* межстрочный интервал */
+  letter-spacing: 0.02em;  /* расстояние между буквами */
+  color: #434455;          /* цвет текста */
+  margin-top: 0;           /* убираем верхний отступ */
+}
+
 
 .values-list {
   padding: 60px 60px 60px 156px; 
@@ -192,14 +210,14 @@ a {
   text-align: center;
   max-height: 732px;
   font-weight: 500;
-  line-height: 1.11;
+  line-height: 1.2;
  }
 
 .team-title {
   font-size: 36px;
   margin-bottom: 40px;
   color: #2E2F42;
-  line-height: 1.11;
+  /*line-height: 1.2;*/
   letter-spacing: 0.02em;
   text-transform: capitalize;
 }
@@ -251,30 +269,30 @@ a {
   margin: 0;
 }
 
-.portfolio {
+.portfolio-list {
   padding: 60px 156px;
   text-align: center;
-  line-height: 1.2;
+  /*line-height: 1.2;*/
   text-transform: capitalize;
-  font-weight: 500;
+  /*font-weight: 500;*/
   font-size: 20px;
   color: #2E2F42;
 }
 
-.portfolio h2 {
+.portfolio-list h2 {
   font-size: 36px;
   margin-bottom: 40px;
   color: #2E2F42;
 }
 
-.portfolio ul {
+.portfolio-list ul {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
   justify-content: center;
 }
 
-.portfolio li {
+.portfolio-list li {
   text-align: left;
   max-width: 360px;
   border: 1px solid #E7E9FC;
@@ -284,35 +302,37 @@ a {
   flex-direction: column;
   justify-content: flex-start;
   gap: 0;
+  border-bottom: 1px solid #E7E9FC;
 }
 
-.portfolio li img {
+.portfolio-list li img {
   display: block;
   width: 100%;
   height: auto;
   margin-bottom: 0;
 }
 
-.portfolio li h3 {
+.portfolio-list li h3 {
   font-size: 20px;
   margin: 16px 16px 8px;
   color: #2E2F42;
 }
 
-.portfolio li p {
+.portfolio-list li p {
   font-size: 16px;
   margin: 0 16px 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em;
+  /*letter-spacing: 0.02em;*/
 }
 
-.footer {
+.footer-links {
   background-color: #2e2f42; 
-  height: 312px;
+  max-height: 312px;
   padding-left: 156px;       
   padding-top: 20px;         /* можно добавить небольшой верхний отступ для красоты */
   padding-bottom: 20px;      /* и нижний отступ */
-  color: white;              /* чтобы текст был виден на тёмном фоне */
+  color: white;     
+  
 }
 .footer-logo {
   font-family: 'Raleway', sans-serif;
@@ -341,5 +361,5 @@ a {
 }
 
 .footer-logo .logo-part {
-  color: #ffffff;
+  color:#f4f4fd ;
 } 
