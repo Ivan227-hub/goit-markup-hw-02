@@ -1,7 +1,10 @@
+:root {
+  --footer-text-color: #F4F4FD;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  color: #434455;
   background-color: #fff;
   margin: 0;
   line-height: 1.5;
@@ -19,18 +22,18 @@ ul {
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 .nav a,
 .contact-info a {
- transition: color 0.3s ease;
- font-style: normal;
+  transition: color 0.3s ease;
+  font-style: normal;
 }
+
 .contact-list {
   list-style: none;
   display: flex;
-  gap: 40px; /* расстояние между элементами */
+  gap: 40px;
 }
 
 .logo span.rest {
@@ -58,17 +61,19 @@ a {
 
 .logo {
   font-family: 'Raleway', sans-serif;
- /* font-size: 18px;*/
-  /*font-weight: 700;*/
-  /*letter-spacing: 3%;*/
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
   padding-left: 156px;
-  /*line-height: 1.17;*/
+  line-height: 1.17;
   text-transform: uppercase;
-  /*color: #4D5AE5*/
- }
-.logo-part {
- color: #2E2F42;
+  color: #4D5AE5;
 }
+
+.logo-part {
+  color: #2E2F42;
+}
+
 .nav-list {
   display: flex;
   gap: 40px;
@@ -78,43 +83,47 @@ a {
 .header-nav a {
   color: #2E2F42;
   font-weight: 500;
-  /*font-size: 16px;*/
- /* line-height: 1.5;
-  letter-spacing: 0.02em;*/
+}
 
-   }
+.nav-link {
+  letter-spacing: 0.02em;
+}
 
 .contact-info {
   display: flex;
   gap: 40px;
   font-size: 16px;
-  }
+  font-style: normal;
+}
 
 .contact-info a {
   color: #2E2F42;
   font-weight: 400;
 }
 
-.nav a:hover,
-.contact-info a:hover {
-  color: #4D5AE5;
+.header-nav a:hover,
+.header-nav a:focus,
+.nav-list a:hover,
+.nav-list a:focus,
+.contact-info a:hover,
+.contact-info a:focus {
+  color: #404BBF;
 }
 
 .hero {
   text-align: center;
   background-color: #2E2F42;
   color: white;
-  padding: 120px 20px ;
-  max-height: 600px; 
-  line-height: 1.07; 
+  padding: 120px 20px;
+  max-height: 600px;
+  line-height: 1.07;
   letter-spacing: 0.02em;
 }
 
-.hero h1 {
+.hero-title {
   font-size: 56px;
   font-weight: 700;
   margin-bottom: 32px;
-  
 }
 
 .btn_Services {
@@ -128,50 +137,52 @@ a {
   font-size: 16px;
   transition: background-color 0.3s ease;
   line-height: 1.5;
-  letter-spacing: 0.04em
+  letter-spacing: 0.04em;
 }
 
-/*.btn_Services:hover {
-  background-color: #4D5AE5;
-}*/
 .btn_Services:hover,
 .btn_Services:focus {
-  color: #404BBF; /* зміна кольору шрифту */
+  color: #404BBF;
 }
-
 
 .values {
   padding: 60px 156px;
   text-align: center;
- 
-   }
+}
 
 .values ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
-  line-height: 1.5
-
+  line-height: 1.5;
 }
 
 .values li {
   text-align: left;
   max-width: 264px;
-   max-height: 600px; 
+  max-height: 600px;
 }
 
 .values h3 {
   margin-bottom: 8px;
-  /*font-size: 20px;*/
   font-weight: 700;
   color: #2E2F42;
 }
+.value-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
 
-/*.values p {
-  /*font-size: 16px;*/
-/*line-height: 1.5
- }*/
+.value-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
 
 .team {
   background-color: #F4F4FD;
@@ -190,7 +201,6 @@ a {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
-    
 }
 
 .team ul {
@@ -229,19 +239,16 @@ a {
 
 .team p {
   font-size: 16px;
-  
 }
 
 .portfolio {
   padding: 60px 156px;
   text-align: center;
   line-height: 1.2;
- /* letter-spacing: 0.02em;*/
   text-transform: capitalize;
   font-weight: 500;
   font-size: 20px;
-  color: #2E2F42;  
-
+  color: #2E2F42;
 }
 
 .portfolio h2 {
@@ -260,64 +267,59 @@ a {
 .portfolio li {
   text-align: left;
   max-width: 360px;
-
-  /* рамка и фон, которые были у .text-frame */
-  border: 1px solid #E7E9FC;     /* граница как у text-frame */
-  box-sizing: border-box;        /* учитываем padding в размерах */
-  background-color: #fff;        /* белый фон */
-  
-  display: flex;                 /* выстраиваем содержимое вертикально */
-  flex-direction: column;       /* по вертикали */
-  justify-content: flex-start;  /* контент у верхнего края */
-  gap: 0;                        /* убираем отступ между картинкой и текстом */
+  border: 1px solid #E7E9FC;
+  box-sizing: border-box;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
 }
 
 .portfolio li img {
   display: block;
-  width: 100%;                   /* чтобы изображение занимало всю ширину */
-  height: auto;                  /* сохранить пропорции */
-  margin-bottom: 0;              /* убрать лишний отступ */
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
 }
 
-/* Стили для текста, который раньше был внутри .text-frame */
 .portfolio li h3 {
   font-size: 20px;
-  margin: 16px 16px 8px;         /* отступы внутри блока */
+  margin: 16px 16px 8px;
   color: #2E2F42;
 }
 
 .portfolio li p {
   font-size: 16px;
-  margin: 0 16px 16px;           /* отступы для абзаца */
+  margin: 0 16px 16px;
   line-height: 1.5;
-  letter-spacing: 0.02em; 
-
-}
-
-
-
-
-.footer {
-  background-color: #2E2F42;
-  font-size: 18px;
-  color: white;
-  padding: 60px 156px;
-}
-
-.footer-container {
-  max-width: 312px;
+  letter-spacing: 0.02em;
 }
 
 .footer-logo {
   font-family: 'Raleway', sans-serif;
-  /*font-size: 18px;
-  font-weight: 700;*/
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
- /* line-height: 1.17;*/
   text-transform: uppercase;
   color: #4D5AE5;
-  }
+  text-align: left;
+}
 
-.footer-logo .logo-part {
+.footer-logo .rest {
   color: #ffffff;
+}
+
+.footer-text {
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--footer-text-color);
+  max-width: 312px;
+  text-align: left;
+  margin: 0;
+}
+
+.logo span.rest {
+  color: #f4f4fd;
 }
