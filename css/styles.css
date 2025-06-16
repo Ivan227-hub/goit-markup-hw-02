@@ -5,6 +5,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  color: #434455;
   background-color: #fff;
   margin: 0;
   line-height: 1.5;
@@ -63,15 +64,18 @@ a {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.03em;
   padding-left: 156px;
   line-height: 1.17;
   text-transform: uppercase;
   color: #4D5AE5;
 }
 
-.logo-part {
+/*.logo span.rest {
   color: #2E2F42;
+}*/
+.logo span.rest {
+  color: #f4f4fd;
 }
 
 .nav-list {
@@ -81,7 +85,7 @@ a {
 }
 
 .header-nav a {
-  color: #2E2F42;
+  color:  #434455;
   font-weight: 500;
 }
 
@@ -97,7 +101,7 @@ a {
 }
 
 .contact-info a {
-  color: #2E2F42;
+  color: #434455;
   font-weight: 400;
 }
 
@@ -124,9 +128,10 @@ a {
   font-size: 56px;
   font-weight: 700;
   margin-bottom: 32px;
+  letter-spacing: 0.02em;
 }
 
-.btn_Services {
+.btn_services {
   background-color: #4D5AE5;
   color: white;
   padding: 16px 32px;
@@ -138,11 +143,13 @@ a {
   transition: background-color 0.3s ease;
   line-height: 1.5;
   letter-spacing: 0.04em;
+  font-family: "Roboto", sans-serif;
 }
 
-.btn_Services:hover,
-.btn_Services:focus {
-  color: #404BBF;
+.btn_services:hover,
+.btn_services:focus {
+ background-color: #404BBF;
+ color: white;
 }
 
 .values {
@@ -194,7 +201,7 @@ a {
   letter-spacing: 0.02em;
 }
 
-.team h2 {
+.team-title {
   font-size: 36px;
   margin-bottom: 40px;
   color: #2E2F42;
@@ -208,9 +215,12 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.team li {
+.list-item {
   background-color: #fff;
   border-radius: 0 0 8px 8px;
   overflow: hidden;
@@ -222,7 +232,7 @@ a {
   align-items: center;
 }
 
-.team img {
+.list-item img {
   display: block;
   width: 100%;
   height: auto;
@@ -230,15 +240,21 @@ a {
   border-radius: 0 0 4px 4px;
 }
 
-.team h3 {
+.team-subtitle {
   font-size: 20px;
   margin-top: 16px;
   margin-bottom: 8px;
   color: #2E2F42;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
-.team p {
+.value-text  {
   font-size: 16px;
+  color: #434455;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  margin: 0;
 }
 
 .portfolio {
