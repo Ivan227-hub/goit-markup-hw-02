@@ -47,6 +47,7 @@ a {
   padding: 24px 156px 24px;
   flex-wrap: wrap;
   letter-spacing: 0.02em;
+  align-items: center;
 }
 .nav-list, 
 .nav-link,
@@ -341,7 +342,7 @@ color: #2e2f42;          /* добавь */
 }*/
 
 .footer-text {
-  padding-left: 156px; 
+  /*padding-left: 156px; */
   line-height: 1.5;
  
   color: var(--footer-text-color);
