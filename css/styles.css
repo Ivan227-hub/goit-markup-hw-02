@@ -100,12 +100,12 @@ a {
 
 /*.header-nav a:hover,
 .header-nav a:focus,*/
-.nav-list a:hover,
+/*.nav-list a:hover,
 .nav-list a:focus,
 .contact-list a:hover,
 .contact-list a:focus {
   color: #404bbf;
-}
+}*/
 .hero {
   text-align: center;
   background-color: #2E2F42;
@@ -142,11 +142,11 @@ a {
   color: #404BBF;
   background-color: inherit; /* или не задавать вовсе */
 /*}*/
-.btn_services:hover,
+/*.btn_services:hover,
 .btn_services:focus {
  background-color: #404BBF ;
- color: white;
-}
+ 
+}*/
 
 
 .values-list {
