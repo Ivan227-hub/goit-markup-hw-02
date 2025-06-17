@@ -177,7 +177,7 @@ a {
 /* Стили для заголовков внутри списка */
 .value-title {
 margin-bottom: 8px;      /* для отступа снизу */
-font-weight: 500;        /* добавь */
+/*font-weight: 500;        /* добавь */
 font-size: 20px;         /* добавь */
 line-height: 1.2;        /* добавь */
 letter-spacing: 0.02em;  /* добавь */
