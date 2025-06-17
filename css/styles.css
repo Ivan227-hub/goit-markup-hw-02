@@ -45,21 +45,16 @@ a {
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
- /* align-items: center;*/
   padding: 24px 156px 24px;
   flex-wrap: wrap;
-  /*position: relative;*/ /* добавлено для использования position */
- /* left: 0;            /* чтобы позиционировать относительно левого края */
-  /*top: 0;*/
-   letter-spacing: 0.02em;
+  letter-spacing: 0.02em;
 }
 
 .nav-link,
 .header-nav {
   display: flex;
   gap: 40px;
- /* order: 0; */
-  font-weight: 500;
+ font-weight: 500;
 }
 
 
@@ -71,7 +66,6 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.17;
   text-transform: uppercase;
-  /*flex-grow: 0; */
   height: 21px;
 }
 
@@ -79,29 +73,20 @@ a {
   color: #2e2f42;
 }
 
-/*.logo:hover,
-.logo:focus {
-  color: #404bbf ;
-}*/
 
 .nav-list {
   display: flex;
   gap: 40px;
   padding-left: 156px;
-  /*color:  #2e2f42;*/
-}
+ }
 
 
 
-/*.nav-link {
-  letter-spacing: 0.02em;
-}*/
 .nav-list a{
   color: #2e2f42;
 }
 
 .contact-info {
-  /*padding-left: 940px;*/
   display: flex;
   gap: 40px;
   font-size: 16px;
@@ -113,12 +98,12 @@ a {
   font-weight: 400;
 }
 
-.header-nav a:hover,
-.header-nav a:focus
-/*.nav-list a:hover,
+/*.header-nav a:hover,
+.header-nav a:focus,*/
+.nav-list a:hover,
 .nav-list a:focus,
-.contact-info a:hover,
-.contact-info a:focus*/ {
+.contact-list a:hover,
+.contact-list a:focus {
   color: #404bbf;
 }
 .hero {
@@ -159,8 +144,8 @@ a {
 /*}*/
 .btn_services:hover,
 .btn_services:focus {
- color: #404BBF ;
- 
+ background-color: #404BBF ;
+ color: white;
 }
 
 
