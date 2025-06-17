@@ -28,7 +28,7 @@ a {
   text-decoration: none;
 }
 
-.nav a,
+.nav-list a,
 .contact-info a {
   transition: color 0.3s ease;
   font-style: normal;
@@ -118,8 +118,8 @@ a {
 
 /*.header-nav a:hover,
 .header-nav a:focus,*/
-.nav-link a:hover,
-.nav-link a:focus,
+.nav-list a:hover,
+.nav-list a:focus,
 .contact-list a:hover,
 .contact-list a:focus {
   color:#404bbf;
@@ -162,7 +162,8 @@ a {
 /*}*/
 .btn_services:hover,
 .btn_services:focus {
- color: #404BBF;
+ background-color: #404BBF;
+ 
 }
 
 
