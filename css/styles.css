@@ -79,10 +79,10 @@ a {
   color: #2e2f42;
 }
 
-.logo .logo-part:hover,
-.logo .logo-part:focus {
+/*.logo:hover,
+.logo:focus {
   color: #404bbf ;
-}
+}*/
 
 .nav-list {
   display: flex;
@@ -113,12 +113,12 @@ a {
   font-weight: 400;
 }
 
-/*.header-nav a:hover,
-.header-nav a:focus,*/
-.nav-list a:hover,
+.header-nav a:hover,
+.header-nav a:focus
+/*.nav-list a:hover,
 .nav-list a:focus,
 .contact-info a:hover,
-.contact-info a:focus {
+.contact-info a:focus*/ {
   color: #404bbf;
 }
 .hero {
