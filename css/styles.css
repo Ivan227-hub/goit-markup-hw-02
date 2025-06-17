@@ -62,12 +62,11 @@ a {
    letter-spacing: 0.02em;
 }
 
-.nav-link-active,
+.nav-link,
 .header-nav {
   display: flex;
   gap: 40px;
   order: 0; 
-  color:  #2e2f42;
   font-weight: 500;
 }
 
@@ -82,7 +81,6 @@ a {
   text-transform: uppercase;
   flex-grow: 0; 
   height: 21px;
-  left: 156px;
 }
 
 .logo .logo-part {
@@ -101,9 +99,9 @@ a {
 /*.nav-link {
   letter-spacing: 0.02em;
 }*/
-/*.nav-link.active {
+.nav-link.a {
   color: #2e2f42;
-}*/
+}
 
 .contact-info {
   /*padding-left: 940px;*/
@@ -120,11 +118,11 @@ a {
 
 /*.header-nav a:hover,
 .header-nav a:focus,*/
-.nav-list a:hover,
-.nav-list a:focus,
+.nav-link a:hover,
+.nav-link a:focus,
 .contact-list a:hover,
 .contact-list a:focus {
-  color:#404bbf ;
+  color:#404bbf;
 }
 .hero {
   text-align: center;
@@ -162,10 +160,10 @@ a {
   color: #404BBF;
   background-color: inherit; /* или не задавать вовсе */
 /*}*/
-/*.btn_services:hover
+.btn_services:hover,
 .btn_services:focus {
-  background-color: #404BBF;
-}*/
+ color: #404BBF;
+}
 
 
 .values-list {
@@ -209,19 +207,19 @@ color: #2e2f42;          /* добавь */
   max-width: 264px;
 }
 
-.values-list h3.value-title {
+/*.values-list h3.value-title {
   margin-bottom: 8px;
   font-weight: 500;
   color: #2E2F42;
-}
+}*/
 
-.values-list p.value-text {
+/*.values-list p.value-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
   margin: 0;
-}
+}*/
 
 
 .team-list {
