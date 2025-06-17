@@ -40,25 +40,17 @@ a {
   gap: 40px;
   }
 
-/*.logo span.rest {
-  color: #2e2f42;
-}
-
-
-.footer-logo .rest {
-  color: #ffffff;
-}*/
 
 .site-header {
   background-color: #ffffff;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+ /* align-items: center;*/
   padding: 24px 156px 24px;
   flex-wrap: wrap;
-  position: relative; /* добавлено для использования position */
-  left: 0;            /* чтобы позиционировать относительно левого края */
-  top: 0;
+  /*position: relative;*/ /* добавлено для использования position */
+ /* left: 0;            /* чтобы позиционировать относительно левого края */
+  /*top: 0;*/
    letter-spacing: 0.02em;
 }
 
@@ -66,7 +58,7 @@ a {
 .header-nav {
   display: flex;
   gap: 40px;
-  order: 0; 
+ /* order: 0; */
   font-weight: 500;
 }
 
@@ -79,7 +71,7 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.17;
   text-transform: uppercase;
-  flex-grow: 0; 
+  /*flex-grow: 0; */
   height: 21px;
 }
 
@@ -91,7 +83,7 @@ a {
   display: flex;
   gap: 40px;
   padding-left: 156px;
-  color:  #2e2f42;
+  /*color:  #2e2f42;*/
 }
 
 
@@ -122,7 +114,7 @@ a {
 .nav-list a:focus,
 .contact-list a:hover,
 .contact-list a:focus {
-  color:#404bbf;
+  color: #4d5ae5;
 }
 .hero {
   text-align: center;
@@ -162,7 +154,7 @@ a {
 /*}*/
 .btn_services:hover,
 .btn_services:focus {
- background-color: #404BBF;
+ color: #4d5ae5;
  
 }
 
