@@ -15,6 +15,7 @@ body {
 
 h1, h2, h3, p {
   margin: 0;
+  letter-spacing: 0.02em;
 }
 
 ul {
@@ -135,7 +136,7 @@ a {
   font-size: 56px;
   font-weight: 700;
   margin-bottom: 32px;
-  /*letter-spacing: 0.02em;*/
+  letter-spacing: 0.02em;
 }
 
 .btn_services {
@@ -155,8 +156,9 @@ a {
 
 .btn_services:hover,
 .btn_services:focus {
-  background-color:#404BBF;
   color: #ffffff;
+  background-color:#404BBF;
+  
 }
 .values-list {
   padding: 60px 60px 60px 156px; 
@@ -173,7 +175,7 @@ a {
   
 }
 /* Стили для заголовков внутри списка */
-.val-title {
+.value-title {
 margin-bottom: 8px;      /* для отступа снизу */
 font-weight: 500;        /* добавь */
 font-size: 20px;         /* добавь */
@@ -183,7 +185,7 @@ color: #2e2f42;          /* добавь */
 }
 
 /* Стили для параграфов внутри списка */
-.val-text {
+.value-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -271,13 +273,13 @@ color: #2e2f42;          /* добавь */
   letter-spacing: 0.02em;
 }
 
-.value-text  {
+/*.value-text  {
   font-size: 16px;
   color: #434455;
   letter-spacing: 0.02em;
   line-height: 1.5;
   margin: 0;
-}
+}*/
 
 .portfolio-list {
   padding: 60px 156px;
@@ -330,8 +332,8 @@ color: #2e2f42;          /* добавь */
   font-size: 20px;
   margin: 16px 16px 8px;
   color: #2E2F42;
-   font-weight: 500;
-    line-height: 1.2em;
+  font-weight: 500;
+  line-height: 1.2em;
 }
 
 .portfolio-list li p {
