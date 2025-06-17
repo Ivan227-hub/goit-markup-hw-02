@@ -1,7 +1,9 @@
 :root {
   --footer-text-color: #F4F4FD;
 }
-
+.footer-text {
+  color: var(--footer-text-color);
+}
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -133,7 +135,7 @@ a {
   font-size: 56px;
   font-weight: 700;
   margin-bottom: 32px;
-  letter-spacing: 0.02em;
+  /*letter-spacing: 0.02em;*/
 }
 
 .btn_services {
@@ -154,7 +156,7 @@ a {
 .btn_services:hover,
 .btn_services:focus {
   background-color:#404BBF;
-  color: white;
+  color: #ffffff;
 }
 .values-list {
   padding: 60px 60px 60px 156px; 
@@ -164,7 +166,7 @@ a {
   gap: 24px;
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.2;
+  line-height: 1.2em;
   letter-spacing: 0.02em;
   color: #2e2f42; 
   text-align: left;
@@ -173,13 +175,21 @@ a {
 /* Стили для заголовков внутри списка */
 .val-title {
 margin-bottom: 8px;      /* для отступа снизу */
+font-weight: 500;        /* добавь */
+font-size: 20px;         /* добавь */
+line-height: 1.2;        /* добавь */
+letter-spacing: 0.02em;  /* добавь */
+color: #2e2f42;          /* добавь */
 }
 
 /* Стили для параграфов внутри списка */
 .val-text {
-  font-size: 16px;         /* размер шрифта */
-  color: #434455;          /* цвет текста */
-  margin-top: 0;           /* убираем верхний отступ */
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  margin: 0;
+
 }
 
 
@@ -321,7 +331,7 @@ margin-bottom: 8px;      /* для отступа снизу */
   margin: 16px 16px 8px;
   color: #2E2F42;
    font-weight: 500;
-    line-height: 1.2;
+    line-height: 1.2em;
 }
 
 .portfolio-list li p {
