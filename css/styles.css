@@ -207,6 +207,21 @@ color: #2e2f42;
   padding-bottom: 16px;
   max-width: 264px;
   align-items: center;
+  /* ✅ ДОБАВЛЯЕМ "зайві правила",  */
+  position: relative;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  order: 0;
+  flex-grow: 1;
+  border-bottom: 1px solid #ccc;
 }
 
 .list-item img {
@@ -301,21 +316,4 @@ color: #2e2f42;
 } 
 .visually-hidden {
   display: none;
-}
-.test-style {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  left: 0;
-  top: 0;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  gap: 10px;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  order: 0;
-  flex-grow: 0;
-  border-bottom: 1px solid #ccc;
 }
