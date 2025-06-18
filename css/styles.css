@@ -35,13 +35,13 @@ a {
 
 .contact-list {
   list-style: none;
-  display: flex;
+  display: block;
   gap: 40px;
 }
 
 .site-header {
   background-color: #ffffff;
-  display: flex;
+  display: block;
   justify-content: space-between;
   padding: 24px 156px 24px;
   flex-wrap: wrap;
@@ -51,7 +51,7 @@ a {
 .nav-list, 
 .nav-link,
 .header-nav {
-  display: flex;
+  display: block;
   gap: 40px;
   font-weight: 500;
 }
@@ -75,7 +75,7 @@ a {
 }
 
 .contact-info {
-  display: flex;
+  display: block;
   gap: 40px;
   font-size: 16px;
   font-style: normal;
@@ -188,7 +188,7 @@ a {
 }
 
 .team-list ul {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   justify-content: center;
   gap: 24px;
@@ -241,7 +241,7 @@ a {
 }
 
 .portfolio-list ul {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   gap: 24px;
   justify-content: center;
@@ -252,7 +252,7 @@ a {
   max-width: 360px;
   border: 1px solid #E7E9FC;
   background-color: #fff;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: flex-start;
   gap: 10px;
