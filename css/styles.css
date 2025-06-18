@@ -184,9 +184,9 @@ a {
   background-color: #2E2F42;
   color: white;
   padding-top: 120px;    /* верхний отступ */
-  padding-right: 20px;   /* правый отступ */
-  padding-bottom: 120px; /* нижний отступ равен верхнему */
-  padding-left: 20px; 
+padding-right: 20px;   /* правый отступ */
+padding-bottom: 120px; /* нижний отступ */
+padding-left: 20px;   
   max-height: 600px;
   line-height: 1.07;
 }
@@ -209,7 +209,6 @@ a {
   padding-bottom: 16px; /* нижний отступ равен верхнему */
   padding-left: 32px; 
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
@@ -344,11 +343,7 @@ padding-bottom: 17px; /* добавлен отступ снизу, чтобы н
   inline-size: 100%; /* Вместо inline-size: 100%, чтобы изображение занимало всю ширину контейнера */
   block-size: auto; /* Вместо block-size: auto для сохранения пропорций */
   object-fit: cover;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
+ }
 
 
 .portfolio-list {
@@ -393,7 +388,7 @@ padding-bottom: 17px; /* добавлен отступ снизу, чтобы н
   background-size: 100% 1px;
   background-position: bottom;
   padding-bottom: 17px;
-  box-sizing: border-box;
+  
 }
 
 /* чтобы убрать правый margin у последнего элемента в строке (если в строке 3 элемента) */
