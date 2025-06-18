@@ -1,11 +1,9 @@
 :root {
   --footer-text-color: #F4F4FD;
 }
-
 .footer-text {
   color: var(--footer-text-color);
 }
-
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -22,6 +20,7 @@ h1, h2, h3, p {
 
 ul {
   list-style: none;
+  padding: 0;
   margin: 0;
 }
 
@@ -36,16 +35,24 @@ a {
 
 .contact-list {
   list-style: none;
+  display: flex;
+  gap: 40px;
 }
 
 .site-header {
   background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 156px 24px;
+  flex-wrap: wrap;
   letter-spacing: 0.02em;
+  align-items: center;
 }
-
-.nav-list,
+.nav-list, 
 .nav-link,
 .header-nav {
+  display: flex;
+  gap: 40px;
   font-weight: 500;
 }
 
@@ -63,11 +70,13 @@ a {
   color: #2e2f42;
 }
 
-.nav-list a {
+.nav-list a{
   color: #2e2f42;
 }
 
 .contact-info {
+  display: flex;
+  gap: 40px;
   font-size: 16px;
   font-style: normal;
 }
@@ -83,12 +92,16 @@ a {
 .contact-list a:focus {
   color: #404bbf;
 }
-
 .hero {
   text-align: center;
   background-color: #2E2F42;
   color: white;
+  padding: 120px 20px;
+  max-height: 600px;
   line-height: 1.07;
+}
+.values {
+  margin-top: 60px;
 }
 
 .hero-title {
@@ -101,41 +114,48 @@ a {
 .btn-services {
   background-color: #4D5AE5;
   color: white;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   font-family: "Roboto", sans-serif;
-  cursor: pointer;
-  /* padding, border убраны */
 }
 
 .btn-services:hover,
 .btn-services:focus {
-  background-color: #404BBF;
+  background-color:#404BBF;
 }
 
 .values-list {
+  padding: 60px 60px 60px 156px; 
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2em;
   letter-spacing: 0.02em;
-  color: #2e2f42;
+  color: #2e2f42; 
   text-align: left;
-  /* padding, display, gap убраны */
 }
 
+/* Стили для заголовков внутри списка */
 .portfolio-list li h3,
 .team-subtitle,
 .value-title {
-  margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
+  margin-bottom: 8px;      
+  font-weight: 500;        
+  font-size: 20px;         
+  line-height: 1.2;        
+  letter-spacing: 0.02em;  
+  color: #2e2f42;          
 }
 
+/* Стили для параграфов внутри списка */
 .value-text {
   font-size: 16px;
   line-height: 1.5;
@@ -150,11 +170,13 @@ a {
 
 .team-list {
   background-color: #F4F4FD;
+  padding: 60px 156px 120px;
   text-align: center;
+  max-height: 732px;
   font-weight: 500;
   line-height: 1.2;
-  /* padding убран */
-}
+  margin-top: 60px;
+  }
 
 .team-title {
   font-size: 36px;
@@ -166,30 +188,50 @@ a {
 }
 
 .team-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  padding: 0;
   margin: 0;
   list-style: none;
-  /* display, gap убраны */
 }
 
 .list-item {
   background-color: #fff;
-  /* все запрещённые свойства убраны */
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  padding-bottom: 16px;
+  max-width: 264px;
+  align-items: center;
+  /* Удалены лишние свойства: position, width, height, left, top, box-sizing, order, flex-grow */
+  /* display: flex; */ /* убрано, если не критично, но можно вернуть если нужно */
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* order: 0; */
+  /* flex-grow: 1; */
+  border-bottom: 1px solid #ccc;
 }
 
 .list-item img {
   display: block;
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  /* width, height, border-radius убраны */
+  border-radius: 0 0 4px 4px;
 }
 
 .portfolio-list {
+  padding: 60px 156px;
   text-align: center;
   line-height: 1.11;
   text-transform: capitalize;
   font-weight: 500;
   font-size: 20px;
   color: #2E2F42;
-  /* padding убран */
+  margin-top: 60px;
 }
 
 .portfolio-link {
@@ -200,23 +242,32 @@ a {
 }
 
 .portfolio-list ul {
-  margin: 0;
-  /* display, gap убраны */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
 }
 
 .portfolio-list li {
   text-align: left;
+  max-width: 360px;
+  border: 1px solid #E7E9FC;
   background-color: #fff;
-  font-weight: 400;
-  font-size: 16px;
-  letter-spacing: 0.02em;
-  /* display, flex-direction, gap, border-bottom убраны */
+  display: flex;
+  /* Удалены лишние свойства: position, width, height, left, top, order, flex-grow */
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  /* order: 0; */
+  /* flex-grow: 1; */
+  border-bottom: 1px solid #E7E9FC;
 }
 
 .portfolio-list li img {
   display: block;
+  width: 100%;
+  height: auto;
   margin-bottom: 0;
-  /* width, height убраны */
 }
 
 .portfolio-list li h3 {
@@ -230,12 +281,15 @@ a {
 }
 
 .footer-links {
-  background-color: #2e2f42;
-  color: white;
-  letter-spacing: 0.02em;
-  /* max-height, padding убраны */
+  background-color: #2e2f42; 
+  max-height: 312px;
+  padding-left: 156px;       
+  padding-top: 20px;         
+  padding-bottom: 20px;      
+  color: white; 
+  letter-spacing: 0.02em;    
+  
 }
-
 .footer-logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -250,19 +304,14 @@ a {
 .footer-text {
   line-height: 1.5;
   color: var(--footer-text-color);
+  max-width: 312px;
   text-align: left;
   margin: 0;
-  max-width: 312px;
 }
 
 .footer-logo .logo-part {
-  color: #f4f4fd;
-}
-
+  color:#f4f4fd ;
+} 
 .visually-hidden {
-  opacity: 0;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  /* display: none убран */
+  display: none;
 }
