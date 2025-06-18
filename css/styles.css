@@ -20,7 +20,6 @@ h1, h2, h3, p {
 
 ul {
   list-style: none;
-  padding: 0;
   margin: 0;
 }
 
@@ -35,26 +34,100 @@ a {
 
 .contact-list {
   list-style: none;
-  display: block;
-  gap: 40px;
+  margin: 0;
+  }
+
+.contact-list li {
+  float: left;
+  margin-right: 40px;
+}
+
+.contact-list li:last-child {
+  margin-right: 0;
+}
+
+/* Добавляем clearfix, чтобы контейнер не схлопывался */
+.contact-list::after {
+  content: "";
+  clear: both;
 }
 
 .site-header {
   background-color: #ffffff;
-  display: block;
-  justify-content: space-between;
-  padding: 24px 156px 24px;
-  flex-wrap: wrap;
   letter-spacing: 0.02em;
-  align-items: center;
+  padding-top: 24px;
+  padding-right: 156px;
+  padding-bottom: 24px;
+  padding-left: 156px;
+  overflow: hidden; /* чтобы обернуть float-элементы */
 }
-.nav-list, 
+
+/* Левая часть — логотип и меню */
+.header-nav {
+  float: left;
+  font-weight: 500;
+  margin: 0;
+ }
+
+/* Правая часть — контакты */
+.contact-info {
+  float: right;
+  font-weight: 500;
+  margin: 0;
+  
+}
+
+/* Убираем маркеры у списков */
+.nav-list,
+.contact-list {
+  list-style: none;
+  margin: 0;
+  
+}
+
+/* Элементы меню и контактов — в строку через float */
+.nav-list li,
+.contact-list li {
+  float: left;
+  margin-right: 40px;
+}
+
+/* Убираем правый отступ у последнего элемента */
+.nav-list li:last-child,
+.contact-list li:last-child {
+  margin-right: 0;
+}
+
+/* Очистка потока */
+.site-header::after {
+  content: "";
+  clear: both;
+  visibility: hidden;
+  }
+
+.nav-list,
 .nav-link,
 .header-nav {
-  display: block;
-  gap: 40px;
   font-weight: 500;
+  margin: 0;
+  list-style: none;
+  overflow: hidden; /* Чтобы родитель оборачивал плавающие элементы */
 }
+
+.nav-list > *,
+.nav-link > *,
+.header-nav > * {
+  float: left;
+  margin-right: 40px; /* отступ справа */
+}
+
+/* Убираем отступ у последнего элемента */
+.nav-list > *:last-child,
+.nav-link > *:last-child,
+.header-nav > *:last-child {
+  margin-right: 0;
+}
+
 
 .logo {
   color: #4d5ae5;
@@ -75,15 +148,27 @@ a {
 }
 
 .contact-info {
-  display: block;
-  gap: 40px;
   font-size: 16px;
   font-style: normal;
+  margin: 0;
+ list-style: none;
+  overflow: hidden; /* чтобы контейнер оборачивал плавающие элементы */
+}
+
+.contact-info > * {
+  float: left;
+  margin-right: 40px; /* отступ справа для всех, кроме последнего */
+}
+
+/* Убираем отступ у последнего элемента */
+.contact-info > *:last-child {
+  margin-right: 0;
 }
 
 .contact-info a {
   color: #434455;
   font-weight: 400;
+  vertical-align: middle; /* выравнивание по вертикали */
 }
 
 .nav-list a:hover,
@@ -92,11 +177,16 @@ a {
 .contact-list a:focus {
   color: #404bbf;
 }
+
+
 .hero {
   text-align: center;
   background-color: #2E2F42;
   color: white;
-  padding: 120px 20px;
+  padding-top: 120px;    /* верхний отступ */
+  padding-right: 20px;   /* правый отступ */
+  padding-bottom: 120px; /* нижний отступ равен верхнему */
+  padding-left: 20px; 
   max-height: 600px;
   line-height: 1.07;
 }
@@ -114,7 +204,10 @@ a {
 .btn-services {
   background-color: #4D5AE5;
   color: white;
-  padding: 16px 32px;
+  padding-top: 16px;    /* верхний отступ */
+  padding-right: 32px;  /* правый отступ */
+  padding-bottom: 16px; /* нижний отступ равен верхнему */
+  padding-left: 32px; 
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -131,16 +224,30 @@ a {
 }
 
 .values-list {
-  padding: 60px 60px 60px 156px; 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  padding-top: 60px;
+  padding-right: 60px;
+  padding-bottom: 60px;
+  padding-left: 156px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2em;
   letter-spacing: 0.02em;
-  color: #2e2f42; 
+  color: #2e2f42;
   text-align: left;
+  overflow: hidden; /* чтобы родитель оборачивал плавающие элементы */
+}
+
+.values-list > * {
+  float: left;
+  margin-bottom: 24px;
+  margin-right: 24px;
+  max-inline-size: calc((100% - 3 * 24px) / 4); /* ширина с учётом 3 промежутков по 24px */
+  
+}
+
+/* Убираем правый отступ у каждого 4-го элемента */
+.values-list > *:nth-child(4n) {
+  margin-right: 0;
 }
 
 
@@ -154,7 +261,6 @@ a {
   letter-spacing: 0.02em;  
   color: #2e2f42;          
 }
-
 
 .value-text {
   font-size: 16px;
@@ -170,7 +276,10 @@ a {
 
 .team-list {
   background-color: #F4F4FD;
-  padding: 60px 156px 120px;
+  padding-top: 60px;      /* заменяет верхний отступ */
+  padding-right: 156px;   /* заменяет правый отступ */
+  padding-bottom: 120px;  /* заменяет нижний отступ */
+  padding-left: 156px;    
   text-align: center;
   max-height: 732px;
   font-weight: 500;
@@ -188,42 +297,65 @@ a {
 }
 
 .team-list ul {
-  display: block;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 24px;
-  padding: 0;
   margin: 0;
   list-style: none;
+  overflow: hidden;       /* оборачивает плавающие элементы */
+  text-align: center;     /* центрирует контейнер */
+}
+
+.team-list ul > * {
+  float: left;
+  margin-right: 24px;     /* отступ справа */
+  margin-bottom: 24px;    /* отступ снизу */
+ }
+
+/* Убираем правый отступ у каждого 4-го элемента */
+.team-list ul > *:nth-child(4n) {
+  margin-right: 0;
 }
 
 .list-item {
   background-color: #fff;
-  border-radius: 0 0 8px 8px;
+border-bottom-left-radius: 8px;
+border-bottom-right-radius: 8px;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
   overflow: hidden;
-  padding-bottom: 16px;
+  padding-top: 0;         /* если верхний padding не задан, можно явно поставить 0 */
+  padding-right: 0;       /* если правый padding отсутствует */
+  padding-bottom: 16px;   /* заменяет padding-bottom */
+  padding-left: 0;
   max-width: 264px;
-  align-items: center;
-  
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* order: 0; */
-  /* flex-grow: 1; */
-  border-bottom: 1px solid #ccc;
+  justify-items: center;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   background-image: linear-gradient(to bottom, transparent 99%, #ccc 100%); /* вместо border-bottom добавлена цветная линия фоном */
+background-repeat: no-repeat; /* запрет повторения фона */
+background-size: 100% 1px; /* фон занимает всю ширину и 1px высоты */
+background-position: bottom; /* фон располагается внизу */
+padding-bottom: 17px; /* добавлен отступ снизу, чтобы не перекрывать линию */
+}
+/* Добавляем отступы между непосредственными дочерними элементами */
+.list-item > * + * {
+  margin-top: 10px;
 }
 
 .list-item img {
-  display: block;
-  width: 100%;
-  height: auto;
+  float: left; /* Заставляет элемент вести себя как блочный, убирает нижние пробелы */
+  inline-size: 100%; /* Вместо inline-size: 100%, чтобы изображение занимало всю ширину контейнера */
+  block-size: auto; /* Вместо block-size: auto для сохранения пропорций */
   object-fit: cover;
-  border-radius: 0 0 4px 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
+
 .portfolio-list {
-  padding: 60px 156px;
+  padding-top: 60px;     /* верхний отступ */
+  padding-right: 156px;  /* правый отступ */
+  padding-bottom: 60px;  /* нижний отступ равен верхнему */
+  padding-left: 156px;  
   text-align: center;
   line-height: 1.11;
   text-transform: capitalize;
@@ -241,31 +373,49 @@ a {
 }
 
 .portfolio-list ul {
-  display: block;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
+  list-style: none;
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden; /* чтобы контейнер учитывал плавающие элементы */
+  text-align: left;
 }
 
-.portfolio-list li {
+.portfolio-list ul > li {
+  float: left;
+ max-inline-size: 360px;
+  margin-right: 24px;
+  margin-bottom: 24px;
   text-align: left;
-  max-width: 360px;
   border: 1px solid #E7E9FC;
   background-color: #fff;
-  display: block;
-  flex-direction: column;
-  justify-content: flex-start;
-  gap: 10px;
-  /* order: 0; */
-  /* flex-grow: 1; */
-  border-bottom: 1px solid #E7E9FC;
+  background-image: linear-gradient(to bottom, transparent 99%, #ccc 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: bottom;
+  padding-bottom: 17px;
+  box-sizing: border-box;
+}
+
+/* чтобы убрать правый margin у последнего элемента в строке (если в строке 3 элемента) */
+.portfolio-list ul > li:nth-child(3n) {
+  margin-right: 0;
+}
+
+/* clearfix для ul */
+.portfolio-list ul::after {
+  content: "";
+  clear: both;
+}
+
+.portfolio-list li > * + * {
+  margin-top: 10px;
 }
 
 .portfolio-list li img {
-  display: block;
-  width: 100%;
-  height: auto;
+  inline-size: 100%;
+  block-size: auto;
   margin-bottom: 0;
+  vertical-align: top; /* для корректного выравнивания */
 }
 
 .portfolio-list li h3 {
@@ -311,5 +461,8 @@ a {
   color:#f4f4fd ;
 } 
 .visually-hidden {
-  display: none;
+  visibility: hidden;
+  inline-size: 0;
+  overflow: hidden;
 }
+
