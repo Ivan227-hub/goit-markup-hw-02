@@ -9,19 +9,16 @@ body {
   font-weight: 400;
   color: #434455;
   background-color: #fff;
-  margin: 0;
   line-height: 1.5;
 }
 
 h1, h2, h3, p {
-  margin: 0;
   letter-spacing: 0.02em;
 }
 
 ul {
   list-style: none;
-  margin: 0;
-}
+  }
 
 a {
   text-decoration: none;
@@ -34,8 +31,7 @@ a {
 
 .contact-list {
   list-style: none;
-  margin: 0;
-  }
+   }
 
 .contact-list li {
   float: left;
@@ -62,27 +58,31 @@ a {
   overflow: hidden; /* чтобы обернуть float-элементы */
 }
 
+
+.clearfix::after {
+  content: "";
+  clear: both;
+ 
+}
+
 /* Левая часть — логотип и меню */
 .header-nav {
   float: left;
   font-weight: 500;
-  margin: 0;
- }
+   }
 
 /* Правая часть — контакты */
 .contact-info {
   float: right;
   font-weight: 500;
-  margin: 0;
-  
+    
 }
 
 /* Убираем маркеры у списков */
 .nav-list,
 .contact-list {
   list-style: none;
-  margin: 0;
-  
+    
 }
 
 /* Элементы меню и контактов — в строку через float */
@@ -109,10 +109,14 @@ a {
 .nav-link,
 .header-nav {
   font-weight: 500;
-  margin: 0;
   list-style: none;
-  overflow: hidden; /* Чтобы родитель оборачивал плавающие элементы */
+  }
+.header-nav::after {
+  content: "";
+  clear: both;
+  
 }
+
 
 .nav-list > *,
 .nav-link > *,
@@ -150,10 +154,14 @@ a {
 .contact-info {
   font-size: 16px;
   font-style: normal;
-  margin: 0;
- list-style: none;
-  overflow: hidden; /* чтобы контейнер оборачивал плавающие элементы */
+  list-style: none;
 }
+
+.contact-info::after {
+  content: "";
+  clear: both;
+}
+
 
 .contact-info > * {
   float: left;
@@ -183,10 +191,10 @@ a {
   text-align: center;
   background-color: #2E2F42;
   color: white;
-  padding-top: 120px;    /* верхний отступ */
-padding-right: 20px;   /* правый отступ */
-padding-bottom: 120px; /* нижний отступ */
-padding-left: 20px;   
+  padding-top: 120px;    
+  padding-right: 20px;   
+  padding-bottom: 120px; 
+  padding-left: 20px;   
   max-height: 600px;
   line-height: 1.07;
 }
@@ -233,14 +241,18 @@ padding-left: 20px;
   letter-spacing: 0.02em;
   color: #2e2f42;
   text-align: left;
-  overflow: hidden; /* чтобы родитель оборачивал плавающие элементы */
+}
+
+.values-list::after {
+  content: "";
+  clear: both;
 }
 
 .values-list > * {
   float: left;
   margin-bottom: 24px;
   margin-right: 24px;
-  max-inline-size: calc((100% - 3 * 24px) / 4); /* ширина с учётом 3 промежутков по 24px */
+  max-inline-size: calc((100% - 3 * 24px) / 4); 
   
 }
 
@@ -253,7 +265,7 @@ padding-left: 20px;
 .portfolio-list li h3,
 .team-subtitle,
 .value-title {
-  margin-bottom: 8px;      
+  margin-bottom: 8px;    
   font-weight: 500;        
   font-size: 20px;         
   line-height: 1.2;        
@@ -266,8 +278,7 @@ padding-left: 20px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
-  margin: 0;
-}
+  }
 
 .values-list article {
   max-width: 264px;
@@ -278,7 +289,7 @@ padding-left: 20px;
   padding-top: 60px;      /* заменяет верхний отступ */
   padding-right: 156px;   /* заменяет правый отступ */
   padding-bottom: 120px;  /* заменяет нижний отступ */
-  padding-left: 156px;    
+  padding-left: 156px;   
   text-align: center;
   max-height: 732px;
   font-weight: 500;
@@ -296,7 +307,6 @@ padding-left: 20px;
 }
 
 .team-list ul {
-  margin: 0;
   list-style: none;
   overflow: hidden;       /* оборачивает плавающие элементы */
   text-align: center;     /* центрирует контейнер */
@@ -319,20 +329,19 @@ border-bottom-left-radius: 8px;
 border-bottom-right-radius: 8px;
 border-top-left-radius: 0;
 border-top-right-radius: 0;
-  overflow: hidden;
-  padding-top: 0;         /* если верхний padding не задан, можно явно поставить 0 */
-  padding-right: 0;       /* если правый padding отсутствует */
-  padding-bottom: 16px;   /* заменяет padding-bottom */
+ padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 16px;
   padding-left: 0;
   max-width: 264px;
   justify-items: center;
    border: 1px solid rgba(0, 0, 0, 0.1);
-   background-image: linear-gradient(to bottom, transparent 99%, #ccc 100%); /* вместо border-bottom добавлена цветная линия фоном */
-background-repeat: no-repeat; /* запрет повторения фона */
-background-size: 100% 1px; /* фон занимает всю ширину и 1px высоты */
-background-position: bottom; /* фон располагается внизу */
-padding-bottom: 17px; /* добавлен отступ снизу, чтобы не перекрывать линию */
+   }
+.list-item::after {
+  content: "";
+  clear: both;
 }
+
 /* Добавляем отступы между непосредственными дочерними элементами */
 .list-item > * + * {
   margin-top: 10px;
@@ -369,27 +378,23 @@ padding-bottom: 17px; /* добавлен отступ снизу, чтобы н
 
 .portfolio-list ul {
   list-style: none;
-  margin: 0 auto;
   max-width: 1200px;
-  overflow: hidden; /* чтобы контейнер учитывал плавающие элементы */
+  overflow: hidden; 
   text-align: left;
 }
 
 .portfolio-list ul > li {
   float: left;
- max-inline-size: 360px;
+  max-inline-size: 360px;
   margin-right: 24px;
   margin-bottom: 24px;
   text-align: left;
   border: 1px solid #E7E9FC;
+  border-bottom: 1px solid #ccc; /* вместо фоновой линии */
   background-color: #fff;
-  background-image: linear-gradient(to bottom, transparent 99%, #ccc 100%);
-  background-repeat: no-repeat;
-  background-size: 100% 1px;
-  background-position: bottom;
   padding-bottom: 17px;
-  
 }
+
 
 /* чтобы убрать правый margin у последнего элемента в строке (если в строке 3 элемента) */
 .portfolio-list ul > li:nth-child(3n) {
@@ -414,12 +419,18 @@ padding-bottom: 17px; /* добавлен отступ снизу, чтобы н
 }
 
 .portfolio-list li h3 {
-  margin: 16px 16px 8px;
+   margin-top: 16px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  margin-left: 16px;
 }
 
 .portfolio-list li p {
   font-size: 16px;
-  margin: 0 16px 16px;
+  margin-top: 0;
+margin-right: 16px;
+margin-bottom: 16px;
+margin-left: 16px;
   line-height: 1.5;
 }
 
@@ -449,8 +460,7 @@ padding-bottom: 17px; /* добавлен отступ снизу, чтобы н
   color: var(--footer-text-color);
   max-width: 312px;
   text-align: left;
-  margin: 0;
-}
+ }
 
 .footer-logo .logo-part {
   color:#f4f4fd ;
@@ -458,6 +468,5 @@ padding-bottom: 17px; /* добавлен отступ снизу, чтобы н
 .visually-hidden {
   visibility: hidden;
   inline-size: 0;
-  overflow: hidden;
 }
 
