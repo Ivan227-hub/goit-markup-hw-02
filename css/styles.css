@@ -15,6 +15,32 @@ h1, h2, h3, p {
   line-height: 1.5;
 }
 
+ul {
+  list-style: none;
+  }
+
+a {
+  text-decoration: none;
+}
+
+.nav-list a,
+.contact-info a {
+  font-style: normal;
+}
+
+/* Убираем маркеры у списков */
+.nav-list,
+.contact-list {
+  list-style: none;
+    
+}
+
+.site-header {
+  background-color: #ffffff;
+  letter-spacing: 0.02em;
+   
+}
+
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
@@ -51,12 +77,15 @@ h1, h2, h3, p {
   color: #fff;
   text-align: center;
   line-height: 1.07;
+  max-height: 600px;
+
 }
 
 .hero-title {
   font-size: 56px;
   font-weight: 700;
   letter-spacing: 0.02em;
+  line-height: 1.07;
 }
 
 .btn-services {
@@ -68,13 +97,16 @@ h1, h2, h3, p {
   letter-spacing: 0.04em;
   font-family: "Roboto", sans-serif;
   cursor: pointer;
+  border: none;
+  cursor: pointer;
+
 }
 
 .btn-services:hover,
 .btn-services:focus {
   background-color: #404BBF;
 }
-
+.values-title,
 .values-list {
   font-weight: 500;
   font-size: 20px;
@@ -104,6 +136,7 @@ h1, h2, h3, p {
   font-size: 36px;
   color: #2E2F42;
   letter-spacing: 0.02em;
+    line-height: 1.11;
 }
 
 .portfolio-list li h3 {
@@ -121,6 +154,25 @@ h1, h2, h3, p {
   letter-spacing: 0.02em;
   color: #434455;
 }
+
+.team-list {
+  background-color: #F4F4FD;
+  text-align: center;
+  max-height: 732px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 60px;
+  }
+
+  .list-item {
+  background-color: #fff;
+border-bottom-left-radius: 8px;
+border-bottom-right-radius: 8px;
+border-top-left-radius: 0;
+border-top-right-radius: 0;
+   max-width: 264px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+   }
 
 .team-title {
   font-size: 36px;
