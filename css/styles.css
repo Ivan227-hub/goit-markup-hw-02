@@ -59,6 +59,11 @@ a {
   color: #2e2f42;
   font-weight: 500;
 }
+.contact-info {
+  font-size: 16px;
+  font-style: normal;
+  list-style: none;
+}
 
 .contact-info a {
   color: #434455;
@@ -106,8 +111,7 @@ a {
 .btn-services:focus {
   background-color: #404BBF;
 }
-.values-title,
-.values-list {
+.values-list, .value-title  {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -115,6 +119,7 @@ a {
   color: #2E2F42;
   text-align: left;
 }
+
 
 .value-text {
   font-size: 16px;
@@ -164,6 +169,8 @@ a {
   margin-top: 60px;
   }
 
+
+ 
   .list-item {
   background-color: #fff;
 border-bottom-left-radius: 8px;
